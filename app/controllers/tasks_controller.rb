@@ -50,5 +50,4 @@ class TasksController < ApplicationController
 			@task = current_user.tasks.find_by(id: params[:id])
 			redirect_to current_user if @task.nil?
 		end
-
 end
