@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
   	@task = @user.tasks.build
-    @tasks = @user.tasks.desc.page(params[:page])
+	@tasks = @user.tasks.desc.page(params[:page])
   end
 
   def create
