@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@task = @user.tasks.build
 		@tasks = @user.tasks.desc.page(params[:page])
-    @toki = "asako"
 	end
 
 	def create
@@ -25,8 +24,8 @@ class UsersController < ApplicationController
 
 	private
 
-	def user_params
-		params.require(:user).permit(:name,:email,:password,:password_confirmation)
-	end
+		def user_params
+			params.require(:user).permit(:name,:email,:password,:password_confirmation)
+		end
 
 end
