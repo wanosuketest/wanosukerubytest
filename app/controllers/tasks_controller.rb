@@ -13,7 +13,7 @@ class TasksController < ApplicationController
 	def create
 		@task = current_user.tasks.build(task_params)
 		if @task.save
-			flash[:success] = "タスクを作成しました"
+			flash[:success] = "タスクを作成しましたaaaa"
 			redirect_to current_user
 		else
 			flash[:danger] = "タスク内容を入力してください"
