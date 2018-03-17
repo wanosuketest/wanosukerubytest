@@ -1,5 +1,6 @@
 beauty and beast
 chimny
+sleeping beauty
 
 Started GET "/" for 127.0.0.1 at 2018-02-24 19:03:15 +0900
 Processing by Rails::WelcomeController#index as HTML
