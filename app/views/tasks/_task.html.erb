@@ -1,0 +1,11 @@
+<% if current_user?(task.user) %>
+	<li id="micropost-<%= task.id %>">
+		<span class="content"><%= link_to task.content,task_path(task) %></span>
+		<span class="timestamp"><%= time_ago_in_words(task.created_at) %> ago.</span>
+		<span class="operate">
+			<%= link_to "編集する",edit_task_path(task.id) %>
+			<%= link_to "削除する",task,method: :delete,data:{ confirm: "削除しますか?"} %>
+		</span>
+		<span class="user">投稿者：<%= link_to task.user_name , user_path(task.user) %></span>
+	</li>
+<% end %>
