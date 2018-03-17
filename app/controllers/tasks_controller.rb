@@ -42,13 +42,13 @@ class TasksController < ApplicationController
 
 	private
 
-	def task_params
-		params.require(:task).permit(:content)
-	end
+		def task_params
+			params.require(:task).permit(:content)
+		end
 
-	def corretct_user
-		@task = current_user.tasks.find_by(id: params[:id])
-		redirect_to current_user if @task.nil?
-	end
+		def corretct_user
+			@task = current_user.tasks.find_by(id: params[:id])
+			redirect_to current_user if @task.nil?
+		end
 
 end
