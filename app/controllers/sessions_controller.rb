@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:session][:password])
 			log_in user
 			params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-			redirect_to user
+			redirect_to userr
 		else
 			flash.now[:danger] = "正しいログインIDとパスワードを入力してください"
 			render 'new'
